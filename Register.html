@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UFT-8">
-    <title> Register page </title>
+    <meta charset="UTF-8">
+    <title>Register page</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"],
+        button {
+            padding: 10px;
+            margin-bottom: 15px;
+            display: block;
+            width: 100%;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
 
-<form action = "register.php" method = "post">
-
+<form action="register.php" method="post">
     <label for="username">Username</label>
-    <input type="text" id="username" name ="username" required ><br> <!--required  means cannot be left empty-->
-
+    <input type="text" id="username" name="username" required>
+    <br>
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" required ><br>
-
+    <input type="password" id="password" name="password" required>
+    <br>
     <input type="submit" value="Register">
 </form>
 <br>
-
 <button onclick="window.location.href='home.html'">HOME</button>
-
-
 
 </body>
 </html>

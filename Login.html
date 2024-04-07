@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UFT-8">
-    <title> LOG IN  </title>
+    <meta charset="UTF-8">
+    <title>LOG IN</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body{
-            text-align : center; /* center align the content horizontally */
-
-            margin: 10px; /* Remove default margin */
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
-
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
         input[type="text"],
-        input[type="password"] {
-            padding: 10px; /* Padding for input fields */
+        input[type="password"],
+        input[type="submit"] {
+            padding: 10px;
             margin-bottom: 15px;
+            display: block;
+            width: 100%;
         }
-
     </style>
 </head>
-
 <body>
 
-<form action = "login.php" method = "post">
+<header>
+    <h1>Student Log In</h1>
+</header>
 
-    <input type="text" name ="username" placeholder="Enter your name"><br>
-    <input type="text" name="password" placeholder="Enter your password"><br>
-    <input type="submit" value="Submit">
-</form>
-
-
+<div class="container">
+    <form action="login.php" method="post">
+        <input type="text" name="username" placeholder="Enter your name" required>
+        <br>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<button onclick="window.location.href='home.html'">HOME</button>
+<footer>
+    <p> 2024 </p>
+</footer>
 
 </body>
-
-
-
-
 </html>
